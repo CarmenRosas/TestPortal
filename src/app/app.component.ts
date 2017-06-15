@@ -7,7 +7,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { AppState } from './app.service';
-import {Angulartics2GoogleAnalytics} from "angulartics2";
+import {Angulartics2GoogleTagManager} from "angulartics2";
 
 /**
  * App Component
@@ -64,7 +64,7 @@ export class AppComponent implements OnInit {
   public name = 'Angular 2 Webpack Starter';
   public url = 'https://twitter.com/AngularClass';
 
-  constructor(public appState: AppState, angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) {}
+  constructor(public appState: AppState, angulartics2GoogleTagManager: Angulartics2GoogleTagManager) {}
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
