@@ -28,7 +28,7 @@ import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
-
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
@@ -63,7 +63,8 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
